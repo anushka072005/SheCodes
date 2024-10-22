@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SheCodes Data</title>
+  <style>
+    /* Center the content horizontally */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Align items to the top of the page */
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Style for the container and center the text */
+    .container {
+      text-align: center;
+      margin-top: 20px; /* Add some margin from the top */
+    }
+
+    /* Style for buttons */
+    .button-link {
+      display: inline-block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none; /* Remove underline from links */
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Output area */
+    #output {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SheCodes Information</h1>
+    <!-- First link for fetching h2 elements -->
+    <a class="button-link" href="https://shecodes.io/?_gl=1*guepe6*_gcl_au*MTI1NTQwMjk1NS4xNzI3MTA0ODk1LjExNDU3MjA2NzAuMTcyNzY0MTQ0OC4xNzI3NjQxNjI4" target="_blank">Fetch h2 Elements</a>
+    
+    <!-- Second link for counting students -->
+    <a class="button-link" href="https://shecodes.io/students?_gl=1*guepe6*_gcl_au*MTI1NTQwMjk1NS4xNzI3MTA0ODk1LjExNDU3MjA2NzAuMTcyNzY0MTQ0OC4xNzI3NjQxNjI4" target="_blank">Count Students</a>
+
+    <div id="output"></div>
+  </div>
+
+</body>
+</html>
