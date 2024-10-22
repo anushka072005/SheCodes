@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Country Language Check</title>
+  </head>
+
+  <body>
+    <h1>Country Language Checker</h1>
+
+    <script>
+      // Function that asks for the user's country and checks if they speak Portuguese
+      function askForCountry() {
+        // Prompt the user for their country
+        let country = prompt("What country are you from?");
+
+        // Convert the input to lowercase to make it case-insensitive
+        country = country.toLowerCase();
+
+        // Check if the country is Brazil or Portugal
+        if (country === "brazil" || country === "portugal") {
+          alert("You speak Portuguese");
+        } else {
+          alert("Go learn Portuguese!");
+        }
+      }
+
+      // Call the function to execute it
+      askForCountry();
+    </script>
+  </body>
+</html>
