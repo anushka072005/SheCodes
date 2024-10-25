@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salsa - My hobby 💃</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #000;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        padding: 20px;
+      }
+
+      .dark-theme {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px 0; /* Increased margin for spacing */
+        width: 80%; /* Increased width for larger images */
+        border-radius: 8px; /* Optional: adds rounded corners to images */
+      }
+
+      footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="themeToggle">Dark Theme</button>
+    <h1>Salsa</h1>
+    <h2>My favorite hobby</h2>
+    <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/122/original/salsa-header.jpg?1663066724"
+        alt="Salsa Dance"
+      />
+    </a>
+
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/123/original/salsa-grid-1.jpg?1663066729"
+      alt="Salsa Image 1"
+    />
+    
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/124/original/salsa-grid-2.jpg?1663066734"
+      alt="Salsa Image 2"
+    />
+    
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/125/original/salsa-grid-3.jpg?1663066738"
+      alt="Salsa Image 3"
+    />
+    
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/126/original/salsa-grid-4.jpg?1663066742"
+      alt="Salsa Image 4"
+    />
+    
+    <img
+      src="https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,f_auto,q_60,w_750/v1/goldenapron/62321f5b3f382"
+      alt="Additional Salsa Image"
+    />
+
+    <p>
+      Salsa is a Latin dance, associated with the music genre of the same name,
+      which was first popularized in the United States in the 1960s in New York
+      City. Salsa is an amalgamation of Cuban dances, such as mambo, pachanga
+      and rumba, as well as American dances such as swing and tap.
+    </p>
+
+    <button>Learn Salsa</button>
+
+    <footer>
+      Coded with 💜 by
+      <a href="https://www.shecodes.io/" target="_blank">Matt Delac</a>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        themeToggle.textContent =
+          themeToggle.textContent === 'Dark Theme' ? 'Light Theme' : 'Dark Theme';
+      });
+    </script>
+  </body>
+</html>
