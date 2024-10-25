@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: pink; /* Initial background color */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: darkslategray;
+            margin: 0; /* Remove default margin */
+        }
+        h2 {
+            color: darkslategray;
+            margin: 10px 0; /* Add space below the first heading */
+        }
+        .image-container {
+            background-color: white; /* White background for the image list */
+            padding: 20px 20px; /* Padding on top and bottom, left and right */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+            margin: 20px auto; /* Center the container */
+            display: inline-block; /* Only take as much width as needed */
+        }
+        .image-sequence img {
+            width: 600px; /* Increased width for larger images */
+            margin: 10px auto; /* Center the images */
+            display: block; /* Stack images one below the other */
+            border-radius: 8px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.2s; /* Smooth transition for scaling */
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: lightgray;
+            display: none; /* Hide footer by default */
+        }
+        /* Button Styles */
+        #colorChangeBtn, #learnSalsaBtn {
+            padding: 10px 20px; /* Add padding */
+            background-color: darkslategray; /* Background color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+            margin: 10px; /* Margin for spacing */
+        }
+        #colorChangeBtn:hover, #learnSalsaBtn:hover {
+            background-color: slategray; /* Change color on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+        .description {
+            margin-top: 20px; /* Space above the description */
+            font-size: 16px; /* Font size */
+            color: darkslategray; /* Text color */
+        }
+        .description a {
+            color: blue; /* Link color */
+            text-decoration: none; /* Remove underline from link */
+        }
+        .description a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What is Salsa?</h1>
+        <h2>My Favorite Type of Dance</h2>
+        
+        <button id="colorChangeBtn">Dark Theme</button> <!-- Dark Theme button moved up -->
+
+        <div class="image-container">
+            <div class="image-sequence">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/123/original/salsa-grid-1.jpg?1663066729" alt="Salsa Image 1">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/124/original/salsa-grid-2.jpg?1663066734" alt="Salsa Image 2">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/125/original/salsa-grid-3.jpg?1663066738" alt="Salsa Image 3">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/126/original/salsa-grid-4.jpg?1663066742" alt="Salsa Image 4">
+                <img src="https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,f_auto,q_60,w_750/v1/goldenapron/62321f5b3f382" alt="Additional Salsa Image">
+            </div>
+        </div>
+
+        <div class="description">
+            <p>
+                Salsa is a Latin dance, associated with the music genre of the same name, which was first popularized in the United States in the 1960s in New York City. Salsa is a combination of Cuban dances, such as mambo, pachanga, and rumba, as well as American dances such as swing and tap.
+            </p>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">📖 Read on Wikipedia</a>
+            </p>
+        </div>
+        
+        <button id="learnSalsaBtn" onclick="window.open('https://en.wikipedia.org/wiki/Salsa_(dance)', '_blank')">Learn Salsa +</button>
+        
+        <footer id="footer">
+            <p>© 2024 My Gallery</p>
+        </footer>
+    </div>
+
+    <script>
+        const button = document.getElementById('colorChangeBtn');
+        const images = document.querySelectorAll('.image-sequence img');
+        const footer = document.getElementById('footer');
+
+        button.addEventListener('click', () => {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'pink' ? 'darkslategray' : 'pink';
+        });
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Toggle footer visibility
+                footer.style.display = footer.style.display === 'block' ? 'none' : 'block';
+
+                // Scale the image up
+                if (image.style.transform === 'scale(2)') {
+                    image.style.transform = 'scale(1)'; // Reset scale
+                } else {
+                    image.style.transform = 'scale(2)'; // Enlarge the image
+                }
+            });
+        });
+    </script>
+</body>
+</html>
